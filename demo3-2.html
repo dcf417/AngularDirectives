@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="directivesApp">
+<head>
+    <title>AngularJS Directives</title>
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <script src="lib/jquery-2.1.1.js"></script>
+    <script src="lib/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/directives.js"></script>
+</head>
+<body>
+<div class="container main" ng-controller="Demo3Part2Controller">
+    <h3>Parent controller</h3>
+    <div>
+        <label for="person1">First person:</label> <input id="person1" ng-model="notChangeable">
+        <label for="canChange">Second person: </label> <input id="canChange" ng-model="changeable">
+    </div>
+    <isolated-demo not-changeable="{{ notChangeable }}" changeable="changeable" say-hello="sayHello()"></isolated-demo>
+</div>
+</body>
+</html>
